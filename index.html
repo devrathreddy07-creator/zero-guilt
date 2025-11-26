@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZERO GUILT — Ice Cream</title>
+
+  <!-- Fonts: Playfair Display (headings) + Inter (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="ZERO GUILT — Delicious low-guilt ice cream flavours + feedback" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">ZERO GUILT</div>
+      <div class="tag">Indulge without the guilt</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="flavours">
+      <div class="section-head">
+        <h2>Flavours</h2>
+        <div class="filters" role="tablist" aria-label="Filter flavours">
+          <button data-filter="all" class="active" role="tab">All</button>
+          <button data-filter="vegan" role="tab">Vegan</button>
+          <button data-filter="sugar-free" role="tab">Sugar-free</button>
+          <button data-filter="seasonal" role="tab">Seasonal</button>
+        </div>
+      </div>
+
+      <div id="flavourGrid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="feedback" aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading">Give Us Feedback</h2>
+      <form id="feedbackForm" class="feedback-form" autocomplete="off">
+        <div class="row">
+          <input id="name" name="name" placeholder="Your name" />
+          <input id="email" name="email" placeholder="Email (optional)" />
+        </div>
+
+        <div class="row">
+          <select id="flavourSelect" name="flavour" required>
+            <option value="">Select a flavour you tried</option>
+          </select>
+
+          <div class="rating">
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" required>
+              <option value="">—</option>
+              <option value="5">5 — Loved it</option>
+              <option value="4">4 — Really good</option>
+              <option value="3">3 — Nice</option>
+              <option value="2">2 — Could be better</option>
+              <option value="1">1 — Not for me</option>
+            </select>
+          </div>
+        </div>
+
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us what you liked or how we can improve"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send feedback</button>
+          <button type="button" id="clearFeedback" class="btn">Clear all feedback</button>
+        </div>
+        <div id="formMsg" class="form-msg" aria-live="polite"></div>
+      </form>
+
+      <h3>Recent feedback</h3>
+      <div id="feedbackList" class="feedback-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© ZERO GUILT — Indulge responsibly. Built with love.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
