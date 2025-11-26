@@ -1,0 +1,33 @@
+ound:transparent;
+  color:var(--chocolate);
+  font-weight:600;
+}
+.btn.primary{
+  background:var(--chocolate);
+  color:var(--off-white);
+  box-shadow:0 6px 18px rgba(90,53,43,0.08);
+  font-weight:700;
+}
+
+.form-msg{margin-top:8px;color:var(--chocolate);font-size:13px}
+
+/* feedback list */
+.feedback-list{
+  margin-top:12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  max-height:320px;
+  overflow:auto;
+}
+.fb-item{
+  background:#fff;
+  border-radius:10px;
+  padding:10px;
+  border:1px solid rgba(90,53,43,0.04);
+}
+.fb-meta{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+.fb-body{margin-top:8px;color:var(--chocolate)}
+
+/* footer */
+.site-footer{max-width:var(--max-width);margin:24px auto 40px auto;padding:0 16px;color:var(--muted);text-align:center}
